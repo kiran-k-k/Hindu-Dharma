@@ -1029,28 +1029,92 @@ body {
         height: 250px;
     }
     
+    /* Timeline Mobile Styles */
+    .timeline {
+        padding: 0 10px;
+    }
+    
     .timeline::before {
-        left: 20px;
+        left: 30px;
+        width: 2px;
     }
     
     .timeline-item {
         flex-direction: column;
         align-items: flex-start;
-        padding-left: 50px;
+        padding-left: 60px;
+        margin: 2rem 0;
+        position: relative;
+    }
+    
+    .timeline-item::before {
+        content: '';
+        position: absolute;
+        left: 24px;
+        top: 20px;
+        width: 12px;
+        height: 12px;
+        background: #ff8c00;
+        border-radius: 50%;
+        border: 3px solid #fff;
+        box-shadow: 0 0 0 3px #ff8c00;
     }
     
     .timeline-item:nth-child(odd) {
         flex-direction: column;
     }
     
+    .timeline-date {
+        position: absolute;
+        left: -40px;
+        top: 0;
+        min-width: 120px;
+        font-size: 0.8rem;
+        padding: 8px 12px;
+        transform: rotate(-90deg);
+        transform-origin: center;
+        white-space: nowrap;
+    }
+    
     .timeline-content {
-        margin: 1rem 0 0 0;
+        margin: 0;
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+    .timeline-content img {
+        max-width: 150px;
+        height: 100px;
+        float: right;
+        margin: 0 0 10px 15px;
     }
     
     .scriptures-grid,
     .philosophy-content,
     .traditions-grid {
         grid-template-columns: 1fr;
+    }
+    
+    /* History page mobile styles */
+    .ruler-period {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .ruler-period:nth-child(even) {
+        flex-direction: column;
+    }
+    
+    .period-date {
+        min-width: auto;
+        align-self: flex-start;
+    }
+    
+    .period-content img {
+        float: none;
+        margin: 0 0 1rem 0;
+        max-width: 200px;
+        height: 120px;
     }
 }
 
@@ -1068,5 +1132,49 @@ body {
     .philosophy-section,
     .traditions-section {
         padding: 60px 0;
+    }
+    
+    /* Enhanced mobile timeline styles */
+    .timeline {
+        padding: 0 5px;
+    }
+    
+    .timeline-item {
+        padding-left: 50px;
+    }
+    
+    .timeline-date {
+        left: -35px;
+        font-size: 0.7rem;
+        padding: 6px 10px;
+        min-width: 100px;
+    }
+    
+    .timeline-content {
+        padding: 15px;
+    }
+    
+    .timeline-content img {
+        max-width: 120px;
+        height: 80px;
+        margin: 0 0 10px 10px;
+    }
+    
+    .timeline-content h3 {
+        font-size: 1.1rem;
+    }
+    
+    .timeline-content p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    
+    /* Section headings */
+    .timeline-section h2,
+    .scriptures-section h2,
+    .philosophy-section h2,
+    .traditions-section h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
     }
 }
