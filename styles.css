@@ -1,0 +1,1072 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 140, 0, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #fff3cd;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(135deg, #ff8c00 0%, #ffa500 50%, #ff7f00 100%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    flex: 1;
+    color: #fff;
+    z-index: 2;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-top: 40px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+}
+
+.cta-btn {
+    background: linear-gradient(45deg, #fff3cd, #ffeaa7);
+    color: #d63031;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.cta-btn:hover {
+    transform: translateY(-3px);
+}
+
+/* Timeline Section */
+.timeline-section {
+    padding: 100px 0;
+    background: #f8f9fa;
+}
+
+.timeline-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #ff8c00;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: #ff8c00;
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.timeline-item:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+.timeline-date {
+    background: #ff8c00;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    min-width: 150px;
+    text-align: center;
+}
+
+.timeline-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin: 0 2rem;
+    flex: 1;
+}
+
+.timeline-content img {
+    width: 100%;
+    max-width: 200px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.timeline-content h3 {
+    color: #ff8c00;
+    margin-bottom: 0.5rem;
+}
+
+/* Scriptures Section */
+.scriptures-section {
+    padding: 100px 0;
+    background: #fff;
+}
+
+.scriptures-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #ff8c00;
+}
+
+.scriptures-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.scripture-card {
+    background: linear-gradient(135deg, #fff 0%, #fff3cd 100%);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(255, 140, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.scripture-card:hover {
+    transform: translateY(-10px);
+}
+
+.scripture-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.scripture-card h3 {
+    color: #ff8c00;
+    margin-bottom: 1rem;
+}
+
+/* Philosophy Section */
+.philosophy-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #ff8c00 0%, #ffa500 100%);
+    color: #fff;
+}
+
+.philosophy-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.philosophy-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.philosophy-item {
+    background: rgba(255,255,255,0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+.philosophy-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #fff3cd;
+}
+
+/* Traditions Section */
+.traditions-section {
+    padding: 100px 0;
+    background: #f8f9fa;
+}
+
+.traditions-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #ff8c00;
+}
+
+.traditions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.tradition-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(255, 140, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.tradition-card:hover {
+    transform: translateY(-5px);
+}
+
+.tradition-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.tradition-card h3 {
+    color: #ff8c00;
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+.footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+/* Page Hero for other pages */
+.page-hero {
+    background: linear-gradient(135deg, #ff8c00 0%, #ffa500 100%);
+    color: #fff;
+    text-align: center;
+    padding: 120px 0 80px;
+}
+
+.page-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.page-hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Deity Cards */
+.trinity-section, .major-deities {
+    padding: 80px 0;
+}
+
+.trinity-grid, .deities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.deity-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(255, 140, 0, 0.15);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.deity-card:hover {
+    transform: translateY(-10px);
+}
+
+.deity-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.deity-card h3 {
+    color: #ff8c00;
+    margin-bottom: 1rem;
+}
+
+.deity-details {
+    background: #fff3cd;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    text-align: left;
+}
+
+/* Scripture Details */
+.vedas-section, .epics-section, .upanishads-section {
+    padding: 80px 0;
+}
+
+.vedas-grid, .epics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.scripture-detail, .epic-detail {
+    background: #fff;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(255, 140, 0, 0.15);
+}
+
+.scripture-detail img, .epic-detail img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.scripture-detail h3, .epic-detail h3 {
+    color: #ff8c00;
+    margin-bottom: 1rem;
+}
+
+.upanishads-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.upanishad-card {
+    background: linear-gradient(135deg, #fff 0%, #fff3cd 100%);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(255, 140, 0, 0.15);
+}
+
+.upanishad-card h3 {
+    color: #ff8c00;
+    margin-bottom: 1rem;
+}
+
+/* Philosophy Sections */
+.core-concepts, .darshanas-section, .yoga-paths {
+    padding: 80px 0;
+}
+
+.concepts-grid, .darshanas-grid, .paths-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.concept-card, .darshana-card, .path-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(255, 140, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.concept-card:hover, .darshana-card:hover, .path-card:hover {
+    transform: translateY(-5px);
+}
+
+.concept-card h3, .darshana-card h3, .path-card h3 {
+    color: #ff8c00;
+    margin-bottom: 1rem;
+}
+
+/* Festival Sections */
+.major-festivals, .seasonal-festivals, .festival-significance {
+    padding: 80px 0;
+}
+
+.festivals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.festival-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(255, 140, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.festival-card:hover {
+    transform: translateY(-10px);
+}
+
+.festival-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.festival-card h3 {
+    color: #ff8c00;
+    margin-bottom: 1rem;
+}
+
+.seasonal-grid, .significance-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.season-card, .significance-card {
+    background: linear-gradient(135deg, #fff 0%, #fff3cd 100%);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(255, 140, 0, 0.15);
+}
+
+.season-card h3, .significance-card h3 {
+    color: #ff8c00;
+    margin-bottom: 1rem;
+}
+
+.season-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.season-card li {
+    margin-bottom: 0.5rem;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.season-card li:before {
+    content: '🎉';
+    position: absolute;
+    left: 0;
+}
+
+/* Temple Sections */
+.char-dham, .jyotirlingas, .temple-architecture, .famous-temples, .temple-significance {
+    padding: 80px 0;
+}
+
+.char-dham-grid, .marvels-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.dham-card, .marvel-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(255, 140, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.dham-card:hover, .marvel-card:hover {
+    transform: translateY(-10px);
+}
+
+.dham-card img, .marvel-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.dham-card h3, .marvel-card h3 {
+    color: #ff8c00;
+    margin-bottom: 1rem;
+}
+
+.jyotirlinga-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.jyotirlinga-card {
+    background: linear-gradient(135deg, #fff 0%, #fff3cd 100%);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(255, 140, 0, 0.1);
+}
+
+.jyotirlinga-card h4 {
+    color: #ff8c00;
+    margin-bottom: 0.5rem;
+}
+
+.architecture-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.style-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(255, 140, 0, 0.15);
+}
+
+.style-card h3 {
+    color: #ff8c00;
+    margin-bottom: 1rem;
+}
+
+.significance-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.significance-item {
+    background: linear-gradient(135deg, #fff 0%, #fff3cd 100%);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(255, 140, 0, 0.15);
+}
+
+.significance-item h3 {
+    color: #ff8c00;
+    margin-bottom: 1rem;
+}
+
+.section-intro {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* History Page Styles */
+.historical-overview, .timeline-rulers, .documented-evidence, .specific-cases, .human-cost, .resistance-revival, .scholarly-sources {
+    padding: 80px 0;
+}
+
+.historical-overview {
+    background: #f8f9fa;
+}
+
+.overview-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.overview-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.rulers-timeline {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.ruler-period {
+    display: flex;
+    align-items: flex-start;
+    margin: 3rem 0;
+    gap: 2rem;
+}
+
+.ruler-period:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.period-date {
+    background: #ff8c00;
+    color: #fff;
+    padding: 15px 25px;
+    border-radius: 25px;
+    font-weight: 600;
+    min-width: 180px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.period-content {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(255, 140, 0, 0.15);
+    flex: 1;
+}
+
+.period-content img {
+    width: 100%;
+    max-width: 250px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    float: right;
+    margin-left: 1rem;
+}
+
+.period-content h3 {
+    color: #ff8c00;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.period-content p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.evidence-grid, .cases-grid, .resistance-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.evidence-card, .case-study, .resistance-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(255, 140, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.evidence-card:hover, .case-study:hover, .resistance-card:hover {
+    transform: translateY(-5px);
+}
+
+.evidence-card h3, .case-study h3, .resistance-card h3 {
+    color: #ff8c00;
+    margin-bottom: 1rem;
+}
+
+.evidence-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.evidence-card li {
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.evidence-card li:before {
+    content: '📜';
+    position: absolute;
+    left: 0;
+}
+
+.case-study img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.impact-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.impact-section {
+    background: linear-gradient(135deg, #fff 0%, #fff3cd 100%);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(255, 140, 0, 0.15);
+}
+
+.impact-section h3 {
+    color: #ff8c00;
+    margin-bottom: 1rem;
+}
+
+.sources-content {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(255, 140, 0, 0.15);
+    margin-top: 2rem;
+}
+
+.sources-content h3 {
+    color: #ff8c00;
+    margin: 2rem 0 1rem 0;
+}
+
+.sources-content h3:first-child {
+    margin-top: 0;
+}
+
+.sources-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sources-content li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.sources-content li:before {
+    content: '📚';
+    position: absolute;
+    left: 0;
+}
+
+/* Authentication Styles */
+.auth-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ff8c00 0%, #ffa500 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.auth-card {
+    background: #fff;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.auth-header {
+    margin-bottom: 2rem;
+}
+
+.auth-logo {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.auth-header h2 {
+    color: #ff8c00;
+    margin-bottom: 0.5rem;
+}
+
+.auth-header p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.auth-form {
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #fff;
+    transition: border-color 0.3s ease;
+}
+
+.form-group select:focus {
+    outline: none;
+    border-color: #ff8c00;
+}
+
+.dharma-note {
+    font-size: 0.8rem;
+    color: #ff8c00;
+    font-style: italic;
+    margin-top: 0.5rem;
+}
+
+.auth-btn {
+    width: 100%;
+    background: linear-gradient(45deg, #ff8c00, #ffa500);
+    color: #fff;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin-bottom: 1.5rem;
+}
+
+.auth-btn:hover {
+    transform: translateY(-2px);
+}
+
+.auth-links {
+    text-align: center;
+}
+
+.auth-links a {
+    color: #ff8c00;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.auth-links a:hover {
+    text-decoration: underline;
+}
+
+.error-message {
+    background: #ffebee;
+    color: #c62828;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 1rem;
+    display: none;
+    border-left: 4px solid #c62828;
+}
+
+.success-message {
+    background: #e8f5e8;
+    color: #2e7d32;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 1rem;
+    display: none;
+    border-left: 4px solid #2e7d32;
+}
+
+.logout-btn {
+    background: rgba(255, 255, 255, 0.2) !important;
+    padding: 8px 15px !important;
+    border-radius: 20px !important;
+    font-size: 0.9rem !important;
+}
+
+@media (max-width: 480px) {
+    .auth-card {
+        padding: 2rem 1.5rem;
+        margin: 1rem;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background: #ff8c00;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        padding: 2rem 0;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem;
+    }
+    
+    .hero-image {
+        margin-top: 2rem;
+    }
+    
+    .hero-image img {
+        height: 250px;
+    }
+    
+    .timeline::before {
+        left: 20px;
+    }
+    
+    .timeline-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 50px;
+    }
+    
+    .timeline-item:nth-child(odd) {
+        flex-direction: column;
+    }
+    
+    .timeline-content {
+        margin: 1rem 0 0 0;
+    }
+    
+    .scriptures-grid,
+    .philosophy-content,
+    .traditions-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+    
+    .timeline-section,
+    .scriptures-section,
+    .philosophy-section,
+    .traditions-section {
+        padding: 60px 0;
+    }
+}

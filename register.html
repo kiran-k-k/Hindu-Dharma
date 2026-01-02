@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Hindu Dharma</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <div class="auth-logo">🕉️ Hindu Dharma</div>
+                <h2>Create Account</h2>
+                <p>Join us to explore the ancient wisdom</p>
+            </div>
+            
+            <form class="auth-form" id="registerForm">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required minlength="6">
+                </div>
+                
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="hinduDharma">Are you a follower of Hindu Dharma?</label>
+                    <select id="hinduDharma" name="hinduDharma" required>
+                        <option value="">Please select</option>
+                        <option value="yes">Yes, I follow Hindu Dharma</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="auth-btn">Create Account</button>
+                
+                <div class="auth-links">
+                    <p>Already have an account? <a href="login.html">Sign In</a></p>
+                    <p class="dharma-note">*This website is exclusively for followers of Hindu Dharma</p>
+                </div>
+            </form>
+            
+            <div class="error-message" id="errorMessage"></div>
+            <div class="success-message" id="successMessage"></div>
+        </div>
+    </div>
+    
+    <script src="auth.js"></script>
+</body>
+</html>
